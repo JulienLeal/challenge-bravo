@@ -1,0 +1,44 @@
+{
+  "name": "challenge-bravo",
+  "version": "1.0.0",
+  "description": "Construa uma API, que responda JSON, para conversão monetária. Ela deve ter uma moeda de lastro (USD) e fazer conversões entre diferentes moedas com cotações de verdade e atuais.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "env NODE_ENV=development nodemon src/server.js",
+    "dev:debug": "env NODE_ENV=development nodemon --inspect src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienLeal/challenge-bravo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienLeal/challenge-bravo/issues"
+  },
+  "homepage": "https://github.com/JulienLeal/challenge-bravo#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^2.10.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.3",
+    "multer": "^1.4.2",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "yup": "^0.28.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "sequelize-cli": "^5.5.1",
+    "sucrase": "^3.12.1"
+  }
+}
