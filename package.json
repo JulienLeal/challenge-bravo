@@ -4,8 +4,10 @@
   "description": "Construa uma API, que responda JSON, para conversão monetária. Ela deve ter uma moeda de lastro (USD) e fazer conversões entre diferentes moedas com cotações de verdade e atuais.",
   "main": "index.js",
   "scripts": {
-    "dev": "env NODE_ENV=development nodemon src/server.js",
-    "dev:debug": "env NODE_ENV=development nodemon --inspect src/server.js"
+    "start": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js",
+    "create-database":"sequelize db:create",
+    "migrate":"sequelize db:migrate"
   },
   "repository": {
     "type": "git",
