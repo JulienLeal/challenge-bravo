@@ -6,6 +6,8 @@ WORKDIR /home/node/api
 
 COPY package.json yarn.* ./
 
+RUN apk update && apk add bash
+
 USER node
 
 RUN yarn

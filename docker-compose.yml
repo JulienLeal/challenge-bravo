@@ -23,7 +23,20 @@ services:
         POSTGRES_PASSWORD: docker
     networks:
         - api-network
+  migration:
+    environment:
+        NODE_ENV: "development"
+    build: .
 
+    command: ["./wait-for-it.sh", "127.0.0.1:5432", "--", "yarn","create-database", "--", "yarn", "migrate"]
+    container_name: api-nodejs-migrate
+    links:
+        - postgres-db
+    depends_on:
+        - api
+        - postgres-db
+    networks:
+        - api-network
 networks:
   api-network:
     driver: bridge
