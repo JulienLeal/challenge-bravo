@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/server.js",
-    "dev:debug": "nodemon --inspect src/server.js",
+    "dev:debug": "env NODE_ENV=development nodemon --inspect src/server.js",
     "create-database":"sequelize db:create",
     "migrate":"sequelize db:migrate"
   },
