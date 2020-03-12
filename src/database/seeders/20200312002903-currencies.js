@@ -5,13 +5,13 @@ module.exports = {
     const date_now = new Date()
     return queryInterface.bulkInsert('currencies', [{
         name: 'BRL',
-        rates: '{"currency":"USD","rate":4.815101}',
+        rates: '{"USD":{"rate":4.815101}}',
         created_at:'2020-03-11 22:46:00',
         updated_at:'2020-03-11 22:46:00'
       },
       {
         name: 'USD',
-        rates: '{"currency":"BRL","rate":0.207672}',
+        rates: '{"BRL":{"rate":0.207672}}',
         created_at:'2020-03-11 22:46:00',
         updated_at:'2020-03-11 22:46:00'
       }
