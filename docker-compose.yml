@@ -40,3 +40,5 @@ services:
 networks:
   api-network:
     driver: bridge
+
+##TODO fix migration

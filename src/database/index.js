@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
-import Currency from '../models/Currency';
+import Currency from '../app/models/Currency';
 const models = [Currency];
 
 class Database {
@@ -15,5 +15,6 @@ class Database {
   }
 
 }
+//TODO implement redis cache
 
 export default new Database();

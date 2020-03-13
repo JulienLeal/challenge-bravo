@@ -4,7 +4,7 @@ class Currency extends Model{
   static init(sequelize){
     super.init({
       name:Sequelize.STRING,
-      rate:Sequelize.DOUBLE
+      rates:Sequelize.JSON
     },{
       sequelize
     })
