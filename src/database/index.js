@@ -15,5 +15,6 @@ class Database {
   }
 
 }
+//TODO implement redis cache
 
 export default new Database();
