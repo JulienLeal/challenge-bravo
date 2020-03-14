@@ -8,7 +8,11 @@
             "name": "Currency Task",
             "type": "node",
             "request": "attach",
-            "protocol": "inspector"
+            "protocol": "inspector",
+            "restart": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
         },
         {
             "type": "node",
