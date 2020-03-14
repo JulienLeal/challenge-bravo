@@ -4,16 +4,21 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-      {
-        "type": "node",
-        "request": "attach",
-        "name": "Debug mode",
-        "restart":true,
-        "skipFiles": [
-          "<node_internals>/**"
-        ],
-        "protocol":"inspector"
-      }
+        {
+            "name": "Currency Task",
+            "type": "node",
+            "request": "attach",
+            "protocol": "inspector"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Webserver",
+            "restart": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "protocol": "inspector"
+        }
     ]
-  }
+}

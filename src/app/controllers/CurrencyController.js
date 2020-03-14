@@ -30,11 +30,24 @@ class CurrencyController {
         return res.json(result);
       }catch(err){
         console.log(err);
+
         //TODO correct handle errors
         return res.status(400).json(exchange_value);
       }
 
   }
+  async index(req, res){
+    try {
+        const currencies = await Currency.findAll({
+            attributes: ['id','name']
+          });
+        return res.json(currencies);
+    } catch (err) {
+        console.log(err)
+        return res.status(400).json({error:"occour an error"});
+    }
+  }
+
 }
 
 export default new CurrencyController();
