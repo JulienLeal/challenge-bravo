@@ -7,7 +7,8 @@
     "start": "nodemon src/server.js",
     "dev:debug": "env NODE_ENV=development nodemon --inspect src/server.js",
     "create-database": "sequelize db:create",
-    "migrate": "sequelize db:migrate"
+    "migrate": "sequelize db:migrate",
+    "task_currency:dev": "NODE_ENV=development nodemon --inspect-brk src/tasks/CurrencyTask.js"
   },
   "repository": {
     "type": "git",

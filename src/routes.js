@@ -6,6 +6,7 @@ routes.get('/health',(req,res)=>{
     return res.status(200).send("working")
 });
 
-routes.get('/currency', CurrencyController.exchange);
+routes.get('/currency/exchange', CurrencyController.exchange);
+routes.get('/currency', CurrencyController.index);
 
 export default routes;
