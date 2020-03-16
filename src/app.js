@@ -1,6 +1,6 @@
 import express from 'express';
 import routes from './routes';
-import './database'
+import database from './database'
 import cache from './cache'
 class App {
     constructor() {
@@ -19,7 +19,9 @@ class App {
     async connections() {
         try{
             await cache.connect();
-            console.log("Connected on cache");
+            console.log("Connected with cache");
+            await database.connection.authenticate();
+            console.log("Connected with database");
         }catch(err){
             throw new Error(err);
         }

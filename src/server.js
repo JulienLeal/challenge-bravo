@@ -13,7 +13,6 @@ const start = async () => {
             console.log(`Listening on ${PORT} with configuration ${process.env.NODE_ENV}`);
          });
     } catch (err) {
-        console.log("caiu aqui")
         console.log(err);
     }
 }
