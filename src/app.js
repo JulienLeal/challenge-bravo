@@ -1,21 +1,29 @@
 import express from 'express';
 import routes from './routes';
 import './database'
-
+import cache from './cache'
 class App {
-  constructor() {
+    constructor() {
+        this.server = express();
+        this.middlewares();
+        this.routes();
+    }
+    middlewares() {
+        this.server.use(express.json());
+    }
 
-    this.server = express();
-    this.middlewares();
-    this.routes();
-  }
+    routes() {
+        this.server.use(routes);
+    }
 
-  middlewares() {
-    this.server.use(express.json());
-  }
+    async connections() {
+        try{
+            await cache.connect();
+            console.log("Connected on cache");
+        }catch(err){
+            throw new Error(err);
+        }
+    }
 
-  routes() {
-    this.server.use(routes);
-  }
 }
-export default new App().server;
+export default new App();
